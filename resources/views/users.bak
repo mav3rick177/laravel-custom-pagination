@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+   
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    {{ request()->input('direction') }}
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Date Of Birth</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!--@foreach ($users as $user)
+            <tr>
+                <th scope="row">{{ $user->id }}</th>
+                <td>{{ $user->name }}</td>
+                <td>{{ $user->email }}</td>
+                <td>{{ $user->dob }}</td>
+            </tr>
+        @endforeach-->
+      </tbody>
+    </table>
+
+    <!--{{ $users->links() }}-->
+  </div>
+</body>
+</html>
