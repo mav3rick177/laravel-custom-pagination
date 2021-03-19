@@ -14,22 +14,35 @@ class UserController extends Controller
      */
     public function index()
     {
-        // ??!!
+
+        // Form field names
+        $fields = ['sort', 'perPage', 'from', 'to']; 
+
+        // Cache field values
+        $cache = init_paginator_cache($fields);
+        
+
         $columns = ['id','name','email', 'dob']; 
-        $cursor = ['id']; // fields to use as a cursor
+
+        // field to use as a cursor (Database Table field)
+        $cursor = ['dob']; 
+
+        $sort = isset($cache['sort']) ? $cache['sort'] : '>';
+        $perPage = isset($cache['perPage']) ? $cache['perPage'] : 10;
+        $from = isset($cache['from']) ? $cache['from'] : null;
+        $to = isset($cache['to']) ? $cache['to'] : null;
 
         //Get Users Where Birth Date of Birth is between '1968-02-07 13:45:00' and '1970-02-07 21:45:00' 
-        $query = User::select($columns);
-                    //->whereBetween('dob', ['1968-02-07 13:45:00', '1970-02-07 21:45:00']);
-                    //->where('email', 'like', '%example.net%');
+        $query = User::select($columns)
+                    ->whereBetween('dob', [$from, $to]);
+                   // ->where('email', 'like', '%example.net%');
         
+        
+
         // Fonction 
-        $result = custom_paginator($query, $cursor, $cache = null, $sort = '>', $perPage = 10);
-        //dd($result,json_encode($result), base64_encode(json_encode($result)));
-        //$result = json_decode(json_encode($result), true);
-        //dd($prev_btn_router_options, $next_btn_router_options, $route);
-        // Return paginator
-        //dd($result);
+        $result = custom_paginator($query, $cursor, $cache, $sort, $perPage);
+        
+
         return view('users')->with($result);
     }
 

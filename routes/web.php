@@ -18,4 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('/users', [UserController::class, 'index'])->name('users.list');
 Route::get('/users/{direction?}/{state?}', [UserController::class, 'index'])->name('users.list');

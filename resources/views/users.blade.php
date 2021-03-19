@@ -11,7 +11,10 @@
 <body>
   <div class="container">
     {{ request()->input('direction') }}
-    <form>
+    {{ print_r($cache) }}
+    <form action="{{ route('users.list') }}" method="POST">
+      @csrf
+      
       <div class="form-check form-check-inline">
         <label class="form-check-label">
           <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> 1
@@ -30,16 +33,28 @@
       <div class="form-group row">
         <label for="sort" class="col-2 col-form-label">Sort</label>
         <div class="col-4">
-          <select class="form-control" id="sort">
-            <option>asc</option>
-            <option>desc</option>
+          <select class="form-control" id="sort" name="sort">
+            <option value=">">asc</option>
+            <option value="<">desc</option>
           </select>
         </div>
       </div>
       <div class="form-group row">
         <label for="perPage" class="col-2 col-form-label">Elements per page</label>
         <div class="col-4">
-          <input class="form-control" type="number" value="10" id="perPage">
+          <input class="form-control" type="number" value="10" id="perPage" name="perPage">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-date-input" class="col-2 col-form-label">From</label>
+        <div class="col-10">
+          <input class="form-control" type="date" id="example-date-input" name="from">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-date-input" class="col-2 col-form-label">To</label>
+        <div class="col-10">
+          <input class="form-control" type="date" id="example-date-input" name="to">
         </div>
       </div>
       <div class="form-group">
@@ -51,6 +66,9 @@
           <option>4</option>
           <option>5</option>
         </select>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
       </div>
     </form>
     <table class="table">
