@@ -16,34 +16,42 @@ class UserController extends Controller
     {
 
         // Form field names
-        $fields = ['sort', 'perPage', 'from', 'to', 'cursor']; 
+        $formFields = ['sort', 'perPage', 'from', 'to', 'cursor']; 
 
-        // Cache field values
-        $cache = init_paginator_cache($fields);
+        // Cache Form values
+        $cache = init_paginator_cache($formFields);
         
+        // Extract values from the cache 
         $sort = isset($cache['sort']) ? $cache['sort'] : '>';
         $perPage = isset($cache['perPage']) ? $cache['perPage'] : 10;
         $from = isset($cache['from']) ? $cache['from'] : null;
         $to = isset($cache['to']) ? $cache['to'] : null;
-        $cursorr = isset($cache['cursor']) ? $cache['cursor'] : 'id';
-        //dd($cursorr);
+        $field = isset($cache['cursor']) ? $cache['cursor'] : 'id';
+
+        // Columns
         $columns = ['id','name','email', 'dob']; 
 
-        // field to use as a cursor (Database Table field)
-        $cursor = $cursorr; 
+        // field to use as a cursor
+        $cursor = $field; 
 
+        /*
+        ** Query
+        */
 
         //Get Users Where Birth Date of Birth is between '1968-02-07 13:45:00' and '1970-02-07 21:45:00' 
-        $query = User::select($columns)
-                    ->whereBetween('dob', [$from, $to]);
+        $query = User::select($columns);
+                   // ->whereBetween('dob', [$from, $to]);
                    // ->where('email', 'like', '%example.net%');
-        
+       
+        // Test
+        if($cursor == 'dob' && $from != null && $to != null)
+            $query = $query->whereBetween('dob', [$from, $to]);
         
 
-        // Fonction 
+        // Call our custom paginator here...
         $result = custom_paginator($query, $cursor, $cache, $sort, $perPage);
         
-
+        // return the results
         return view('users')->with($result);
     }
 
