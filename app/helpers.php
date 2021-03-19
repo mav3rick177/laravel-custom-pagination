@@ -2,6 +2,15 @@
 use Illuminate\Support\Facades\Route;
 
 if(!function_exists('custom_paginator')){
+    
+    /* Custom pagination System Based on Lampager package
+    * @param  Query     $query
+    * @param  Array     $cursor
+    * @param  Char      $sort 
+    * @param  Integer   $sort
+    * @param  Boolean   $seekable
+    * @return Array     $result
+    */
     function custom_paginator($query, $cursor = null, $sort = '>', $perPage = 10, $seekable = true)
     {
         // Cursor is used to navigate to the next or previous 'pages'
