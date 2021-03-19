@@ -16,7 +16,9 @@ if(!function_exists('init_paginator_cache')){
         // Cache Form values
         if (request()->isMethod('POST')) {
             foreach ($fields as $fieldName) {
-                $cache[$fieldName] = request($fieldName);
+                if(request($fieldName)){
+                    $cache[$fieldName] = request($fieldName);
+                }
             }
         }
         else // else we have to retrieve old cache from the state 
@@ -168,7 +170,7 @@ if(!function_exists('custom_paginator')){
             'next_btn_router_options' => $next_btn_router_options,
             'cache' => $cache
         ];
-        
+
         return $result;
     }
 }
