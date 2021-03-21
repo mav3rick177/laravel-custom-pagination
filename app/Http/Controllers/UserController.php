@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-
+        var_dump(request('test_multiple'));
         // Form field names
         $formFields = ['sort', 'perPage', 'from', 'to', 'cursor']; 
 
