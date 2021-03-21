@@ -103,6 +103,7 @@
       </tbody>
     </table>
     @include('_custom-pagination', ['paginator' => $items])
+    {{ $items->render() }}
     {{ $items->toJson() }}
   </div>
 </body>

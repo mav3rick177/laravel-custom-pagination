@@ -12,6 +12,11 @@ if(!function_exists('init_paginator_cache')){
         //init cache
         $cache = count($fields) > 0 ? [] : null;
         
+        if($cache == [] || $cache == null){
+            $cache['sort'] = $sort;
+            $cache['perPage'] = $perPage;
+        }
+
         // If form is submitted...
         // Cache Form values
         if (request()->isMethod('POST')) {
@@ -65,12 +70,7 @@ if(!function_exists('custom_paginator')){
         
         if($perPage == null)
             $perPage = 10;
-        
-        if($cache == [] || $cache == null){
-            $cache['sort'] = $sort;
-            $cache['perPage'] = $perPage;
-        }
-
+    
         /*
         ** Extract Cursor from the State route parameter
         ** Cursor is used as a reference to navigate to the next or previous 'pages'...
