@@ -89,7 +89,6 @@ class UserController extends Controller
         */
 
         $query = User::select($columns);
-                   // ->whereBetween('dob', [$from, $to]);
                    // ->where('email', 'like', '%example.net%');
        
         //Get Users Where Birth Date of Birth is between $from and $to 
