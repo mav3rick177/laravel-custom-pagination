@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "64293ba752cf4d262a0c0362bad1bfb6",
+    "content-hash": "080e3effd8dc05f3a9b180aaa1fd78b6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -662,22 +662,22 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.2.0",
+            "version": "7.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "0aa74dfb41ae110835923ef10a9d803a22d50e79"
+                "reference": "7008573787b430c1c1f650e3722d9bba59967628"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/0aa74dfb41ae110835923ef10a9d803a22d50e79",
-                "reference": "0aa74dfb41ae110835923ef10a9d803a22d50e79",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/7008573787b430c1c1f650e3722d9bba59967628",
+                "reference": "7008573787b430c1c1f650e3722d9bba59967628",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "guzzlehttp/promises": "^1.4",
-                "guzzlehttp/psr7": "^1.7",
+                "guzzlehttp/psr7": "^1.7 || ^2.0",
                 "php": "^7.2.5 || ^8.0",
                 "psr/http-client": "^1.0"
             },
@@ -685,6 +685,7 @@
                 "psr/http-client-implementation": "1.0"
             },
             "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.4.1",
                 "ext-curl": "*",
                 "php-http/client-integration-tests": "^3.0",
                 "phpunit/phpunit": "^8.5.5 || ^9.3.5",
@@ -698,7 +699,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "7.1-dev"
+                    "dev-master": "7.3-dev"
                 }
             },
             "autoload": {
@@ -740,7 +741,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.2.0"
+                "source": "https://github.com/guzzle/guzzle/tree/7.3.0"
             },
             "funding": [
                 {
@@ -760,7 +761,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-10T11:47:56+00:00"
+            "time": "2021-03-23T11:33:13+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -819,16 +820,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.7.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "53330f47520498c0ae1f61f7e2c90f55690c06a3"
+                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/53330f47520498c0ae1f61f7e2c90f55690c06a3",
-                "reference": "53330f47520498c0ae1f61f7e2c90f55690c06a3",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/35ea11d335fd638b5882ff1725228b3d35496ab1",
+                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1",
                 "shasum": ""
             },
             "require": {
@@ -888,139 +889,22 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/1.7.0"
+                "source": "https://github.com/guzzle/psr7/tree/1.8.1"
             },
-            "time": "2020-09-30T07:37:11+00:00"
-        },
-        {
-            "name": "lampager/lampager",
-            "version": "v0.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lampager/lampager.git",
-                "reference": "546bb10c42d865c6f466dd8231a0780904b2f3a7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/lampager/lampager/zipball/546bb10c42d865c6f466dd8231a0780904b2f3a7",
-                "reference": "546bb10c42d865c6f466dd8231a0780904b2f3a7",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.6 || ^7.0 || ^8.0"
-            },
-            "require-dev": {
-                "codeception/specify": "^0.4.6",
-                "nilportugues/sql-query-formatter": "^1.2",
-                "php-coveralls/php-coveralls": "^1.0",
-                "phpunit/phpunit": "^6.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Lampager\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "mpyw",
-                    "email": "ryosuke_i_628@yahoo.co.jp"
-                }
-            ],
-            "description": "Rapid pagination without using OFFSET",
-            "keywords": [
-                "limit",
-                "offset",
-                "pagination",
-                "paginator"
-            ],
-            "support": {
-                "issues": "https://github.com/lampager/lampager/issues",
-                "source": "https://github.com/lampager/lampager/tree/v0.4.1"
-            },
-            "time": "2020-10-06T05:22:40+00:00"
-        },
-        {
-            "name": "lampager/lampager-laravel",
-            "version": "v0.4.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lampager/lampager-laravel.git",
-                "reference": "571814b80d0281e9f65b50215bbb9f959c82e75b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/lampager/lampager-laravel/zipball/571814b80d0281e9f65b50215bbb9f959c82e75b",
-                "reference": "571814b80d0281e9f65b50215bbb9f959c82e75b",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "illuminate/contracts": "^5.5 || ^6.0 || ^7.0 || ^8.0 || ^9.0",
-                "illuminate/database": "^5.5 || ^6.0 || ^7.0 || ^8.0 || ^9.0",
-                "illuminate/support": "^5.5 || ^6.0 || ^7.0 || ^8.0 || ^9.0",
-                "lampager/lampager": "^0.4",
-                "php": "^7.1 || ^8.0"
-            },
-            "require-dev": {
-                "nilportugues/sql-query-formatter": "^1.2",
-                "orchestra/testbench": "^6.0",
-                "php-coveralls/php-coveralls": "^2.1"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Lampager\\Laravel\\MacroServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Lampager\\Laravel\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "mpyw",
-                    "email": "ryosuke_i_628@yahoo.co.jp"
-                }
-            ],
-            "description": "Rapid pagination for Laravel",
-            "keywords": [
-                "illuminate",
-                "laravel",
-                "limit",
-                "offset",
-                "pagination",
-                "paginator"
-            ],
-            "support": {
-                "issues": "https://github.com/lampager/lampager-laravel/issues",
-                "source": "https://github.com/lampager/lampager-laravel/tree/v0.4.6"
-            },
-            "time": "2020-10-06T09:54:15+00:00"
+            "time": "2021-03-21T16:25:00+00:00"
         },
         {
             "name": "laravel/framework",
-            "version": "v8.33.1",
+            "version": "v8.34.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "354c57b8cb457549114074c500944455a288d6cc"
+                "reference": "81892ca110795a9c46c7e198cba7763bfd2af0bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/354c57b8cb457549114074c500944455a288d6cc",
-                "reference": "354c57b8cb457549114074c500944455a288d6cc",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/81892ca110795a9c46c7e198cba7763bfd2af0bf",
+                "reference": "81892ca110795a9c46c7e198cba7763bfd2af0bf",
                 "shasum": ""
             },
             "require": {
@@ -1175,7 +1059,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-03-16T19:42:32+00:00"
+            "time": "2021-03-23T15:12:51+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1554,6 +1438,73 @@
                 }
             ],
             "time": "2021-01-18T20:58:21+00:00"
+        },
+        {
+            "name": "mav3rick177/rapid-pagination",
+            "version": "v0.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mav3rick177/rapid-pagination.git",
+                "reference": "7317dd1ab0d96c5f547623ccdccb06453df16e89"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mav3rick177/rapid-pagination/zipball/7317dd1ab0d96c5f547623ccdccb06453df16e89",
+                "reference": "7317dd1ab0d96c5f547623ccdccb06453df16e89",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/contracts": "^5.5 || ^6.0 || ^7.0 || ^8.0 || ^9.0",
+                "illuminate/database": "^5.5 || ^6.0 || ^7.0 || ^8.0 || ^9.0",
+                "illuminate/support": "^5.5 || ^6.0 || ^7.0 || ^8.0 || ^9.0",
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "nilportugues/sql-query-formatter": "^1.2",
+                "orchestra/testbench": "^6.0",
+                "php-coveralls/php-coveralls": "^2.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "mav3rick177\\RapidPagination\\MacroServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "mav3rick177\\RapidPagination\\": "src/"
+                },
+                "files": [
+                    "src/Helpers/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "mav3rick177",
+                    "email": "y.radouani929@gmail.com"
+                }
+            ],
+            "description": "Rapid pagination for Laravel",
+            "keywords": [
+                "illuminate",
+                "laravel",
+                "limit",
+                "offset",
+                "pagination",
+                "paginator"
+            ],
+            "support": {
+                "issues": "https://github.com/mav3rick177/rapid-pagination/issues",
+                "source": "https://github.com/mav3rick177/rapid-pagination/tree/v0.0.9"
+            },
+            "time": "2021-03-25T01:40:03+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2313,60 +2264,6 @@
                 "source": "https://github.com/bobthecow/psysh/tree/v0.10.7"
             },
             "time": "2021-03-14T02:14:56+00:00"
-        },
-        {
-            "name": "publicoms/laravel-custom-paginator",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/publicoms/laravel-custom-paginator.git",
-                "reference": "0b155646fbbead99bb227789b962fa0cf5e2d197"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/publicoms/laravel-custom-paginator/zipball/0b155646fbbead99bb227789b962fa0cf5e2d197",
-                "reference": "0b155646fbbead99bb227789b962fa0cf5e2d197",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.0|^8.0",
-                "symfony/http-foundation": "~2.7|~3.0|~4.0|~5.0",
-                "symfony/http-kernel": "~2.7|~3.0|~4.0|~5.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6|^7|^8|^9",
-                "squizlabs/php_codesniffer": "^3.5"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "publicoms\\ItemPaginator\\ItemPaginatorServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "publicoms\\ItemPaginator\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "KARIM",
-                    "email": "ocpmstest@gmail.com"
-                }
-            ],
-            "description": "Paginate based on last item, not pages.",
-            "support": {
-                "issues": "https://github.com/publicoms/laravel-custom-paginator/issues",
-                "source": "https://github.com/publicoms/laravel-custom-paginator/tree/master"
-            },
-            "time": "2021-03-10T14:10:41+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -5231,16 +5128,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "2.5.14",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "17097f7a83e200d90d1cf9f4d1b35c1001513a47"
+                "reference": "4be10a998815f77952b9eb983fb0b64c8a4defbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/17097f7a83e200d90d1cf9f4d1b35c1001513a47",
-                "reference": "17097f7a83e200d90d1cf9f4d1b35c1001513a47",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/4be10a998815f77952b9eb983fb0b64c8a4defbb",
+                "reference": "4be10a998815f77952b9eb983fb0b64c8a4defbb",
                 "shasum": ""
             },
             "require": {
@@ -5304,7 +5201,7 @@
                 "issues": "https://github.com/facade/ignition/issues",
                 "source": "https://github.com/facade/ignition"
             },
-            "time": "2021-03-04T08:48:01+00:00"
+            "time": "2021-03-24T18:58:31+00:00"
         },
         {
             "name": "facade/ignition-contracts",
@@ -5535,16 +5432,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.4.8",
+            "version": "v1.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "66b26181c3e86266b0b98f45a3398b090f37dee9"
+                "reference": "935b453bf536b284d6fef7c1b5dd2ea52bca34c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/66b26181c3e86266b0b98f45a3398b090f37dee9",
-                "reference": "66b26181c3e86266b0b98f45a3398b090f37dee9",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/935b453bf536b284d6fef7c1b5dd2ea52bca34c0",
+                "reference": "935b453bf536b284d6fef7c1b5dd2ea52bca34c0",
                 "shasum": ""
             },
             "require": {
@@ -5591,7 +5488,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2021-03-16T16:28:57+00:00"
+            "time": "2021-03-23T17:29:26+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -6467,16 +6364,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.3",
+            "version": "9.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "27241ac75fc37ecf862b6e002bf713b6566cbe41"
+                "reference": "c73c6737305e779771147af66c96ca6a7ed8a741"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/27241ac75fc37ecf862b6e002bf713b6566cbe41",
-                "reference": "27241ac75fc37ecf862b6e002bf713b6566cbe41",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c73c6737305e779771147af66c96ca6a7ed8a741",
+                "reference": "c73c6737305e779771147af66c96ca6a7ed8a741",
                 "shasum": ""
             },
             "require": {
@@ -6554,7 +6451,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.3"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.4"
             },
             "funding": [
                 {
@@ -6566,7 +6463,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-17T07:30:34+00:00"
+            "time": "2021-03-23T07:16:29+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -7585,9 +7482,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "publicoms/laravel-custom-paginator": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

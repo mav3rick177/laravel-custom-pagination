@@ -12,11 +12,10 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "lampager/lampager-laravel": "^0.4.6",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
-        "publicoms/laravel-custom-paginator": "dev-master"
+        "mav3rick177/rapid-pagination": "v0.0.9"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -41,10 +40,7 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        },
-        "files": [
-            "app/helpers.php"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {

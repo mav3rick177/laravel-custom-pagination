@@ -11,7 +11,6 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
-    use \publicoms\ItemPaginator\ItemPaginatorTrait;
 
     /**
      * The attributes that are mass assignable.

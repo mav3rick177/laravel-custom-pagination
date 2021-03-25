@@ -10,8 +10,6 @@
 </head>
 <body>
   <div class="container">
-    {{ request()->input('direction') }}
-    {{ print_r($cache) }}
     <form action="{{ route('users.list') }}" method="POST">
       @csrf
       
@@ -102,9 +100,7 @@
         @endforeach
       </tbody>
     </table>
-    @include('_custom-pagination', ['paginator' => $items])
     {{ $items->render() }}
-    {{ $items->toJson() }}
   </div>
 </body>
 </html>

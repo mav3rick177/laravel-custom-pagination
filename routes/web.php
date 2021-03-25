@@ -20,7 +20,5 @@ Route::get('/', function () {
 
 Route::get('/users/edit/{id}', [UserController::class, 'edit'])->name('users.edit');
 Route::post('/users', [UserController::class, 'index'])->name('users.list');
-
-// Must be in here, order is important!
-Route::get('/users/{direction?}/{state?}', [UserController::class, 'index'])->name('users.list');
+Route::get('/users', [UserController::class, 'index'])->name('users.list');
 

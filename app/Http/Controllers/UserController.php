@@ -14,12 +14,11 @@ class UserController extends Controller
      */
     public function index()
     {
-
         // Form field names
         $formFields = ['sort', 'perPage', 'from', 'to', 'cursor']; 
 
         // Cache Form values
-        $cache = init_paginator_cache($formFields);
+        $cache = init_rapid_paginator_cache($formFields);
         
         // Extract values from the cache 
         $sort = isset($cache['sort']) ? $cache['sort'] : '>';
@@ -49,7 +48,7 @@ class UserController extends Controller
         
 
         // Call our custom paginator here...
-        $result = custom_paginator($query, $cursor, $cache, $sort, $perPage);
+        $result = rapid_paginator($query, $cursor, $cache, $sort, $perPage);
         
         // return the results
         return view('users')->with($result);
