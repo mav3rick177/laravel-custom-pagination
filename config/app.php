@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-        //mav3rick177\RapidPagination\MacroServiceProvider::class,
+        mav3rick177\RapidPagination\MacroServiceProvider::class,
 
         /*
          * Application Service Providers...
